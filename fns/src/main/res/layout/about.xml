@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llAdMobAbout"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:background="#00000000">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvAbout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#00000000" />
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/llAdMobAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <!--<com.yodo1.mas.banner.Yodo1MasBannerAdView xmlns:masads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/avBottomBannerAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                masads:adSize="Banner"/>-->
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

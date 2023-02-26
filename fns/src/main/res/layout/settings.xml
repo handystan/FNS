@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/tvFolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/folder_for_files"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/etFolder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/bChangeDir"
+                    android:enabled="false"
+                    android:hint="@string/path_folder"
+                    android:minHeight="48dp"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/bChangeDir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/change" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#888888" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WebActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/rlProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bord_layout"
+            android:padding="15dp"
+            android:visibility="invisible">
+
+            <ProgressBar
+                android:id="@+id/pbWV"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:backgroundTint="#00000000"
+                android:indeterminateTint="#784BB3" />
+
+            <TextView
+                android:id="@+id/tvConnecting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pbWV"
+                android:layout_centerHorizontal="true"
+                android:background="#00000000"
+                android:paddingStart="5dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="5dp"
+                android:text="@string/connect_FNS"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#784BB3" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

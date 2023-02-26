@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">EGRUL</string>
+    <string name="app_name_rus">Выписки ЕГРЮЛ</string>
+    <string name="connect_FNS">Связь с ФНС …</string>
+    <string name="connect_service_FNS">Связь с сервисами ФНС …</string>
+    <string name="service_FNS_not_available">Сервисы ФНС пока не доступны …</string>
+    <string name="save_folder">Папка с выписками ЕГРЮЛ/ЕГРИП</string>
+    <string name="share">Поделиться</string>
+    <string name="settings">Настройки</string>
+    <string name="folder_for_files">Папка для загрузки выписок ЕГРЮЛ/ЕГРИП:</string>
+    <string name="path_folder">Путь к папке</string>
+    <string name="change">Изменить</string>
+    <string name="help">О сервисе</string>
+    <string name="pdf_view">Просмотр выписки</string>
+    <string name="evaluate">Оценить приложение</string>
+    <string name="about">О программе</string>
+    <string name="exit">Выход</string>
+    <string name="close">Закрыть</string>
+    <string name="open_file">Открыть файл</string>
+    <string name="show_in_folder">Показать в папке</string>
+    <string name="file">Файл</string>
+    <string name="downloaded">загружен</string>
+    <string name="folder_not_changed">Папка не изменена!</string>
+    <string name="should_standard_folder">Итоговая папка должна быть одной из следующих папок либо ее подпапкой:</string>
+    <string name="cant_open_file">Не найдено приложение, с помощью которого можно открыть файл</string>
+    <string name="need_internet">Для соединения с сервисами ФНС России необходим доступ в интернет</string>
+    <string name="file_is_not_loaded">Файл не удалось загрузить</string>
+    <string name="start_url">https://egrul.nalog.ru/index.html</string>
+    <string name="page_help">https://egrul.nalog.ru/about.html</string>
+    <string name="error_page">http://egrul.nalog.ru/index.html</string>
+    <string name="pb_page">pb.nalog.ru</string>
+    <string name="pattern_for_start_page"><![CDATA[<div class=\"pnl-result hidden\" id=\"resultPanel\">]]></string>
+    <string name="pattern_for_repair_page"><![CDATA[<p>Сервис временно недоступен по причине проведения технических работ.</p>]]></string>
+    <string name="pattern_for_close_1"><![CDATA[<div class=\"uni-dialog\" id=\"uniDialog\">]]></string> <!--форма выбора регионов-->
+    <string name="pattern_for_close_2">pattern is not applicable here</string>
+    <string name="pattern_for_close_3">pattern is not applicable here</string>
+    <string name="pattern_for_close_4">pattern is not applicable here</string>
+    <!--для закрытия формы выбора регионов-->
+    <string name="script_for_close_1">
+        <![CDATA[
+            javascript:(function() {
+                document.querySelector(\'.i18n-RUS\').style.overflow=\'visible\';
+                document.querySelector(\'.uni-dialog\').style.display=\'none\';
+            })()
+        ]]>
+    </string>
+    <string name="script_for_close_2">script is not applicable here</string>
+    <string name="script_for_close_3">script is not applicable here</string>
+    <string name="script_for_close_4">script is not applicable here</string>
+    <!--верхний бар-->
+    <!--огромная надпись посередине-->
+    <!--нижнее оформление сайта-->
+    <!--явно прописывается текст в чек-боксе по точному совпадению наименования-->
+    <!--на странице "О сервисе" убирается абзац адресации тех. вопросов в ФНС-->
+    <string name="jstext_filtered_html">
+        <![CDATA[
+            javascript:(function() {
+                document.querySelector(\'.top-bar-wrapper\').style.display=\'none\';
+                document.querySelector(\'.page-subtitle-wrapper\').style.display=\'none\';
+                document.querySelector(\'.page-footer\').style.display=\'none\';
+                document.querySelector(\'#unichk_0\').text=\'Искать по точному соответствию наименования юридического лица или фамилии, имени и отчеству\';
+                document.querySelector(\'.col-left-75\').querySelectorAll(\'p\')[7].style.display=\'none\';
+            })()
+        ]]>
+    </string>
+    <!--ссылка назад в окне Прозрачного бизнеса-->
+    <!--ссылка на сайт ФНС в основном окне Прозрачного бизнеса-->
+    <!--меню в Прозрачном бизнесе-->
+    <!--нижнее оформление сайта по Прозрачному бизнесу-->
+    <!--выписка ЕГРЮЛ из Прозрачного бизнеса (пока не получается выгружать)-->
+    <string name="jstext_filtered_html_pb">
+        <![CDATA[
+            javascript:(function() {
+                document.querySelector(\'.page-section\').style.display=\'none\';
+                document.querySelector(\'.top-bar-wrapper\').style.display=\'none\';
+                document.querySelector(\'.primary-menu-trigger\').style.display=\'none\';
+                document.querySelector(\'.page-footer\').style.display=\'none\';
+                document.querySelector(\'.sticker.sticker-right\').style.display=\'none\';
+            })()
+        ]]>
+    </string>
+    <string name="about_desc">
+        <![CDATA[
+            <p><big><b>Выписки ЕГРЮЛ/ЕГРИП</b></big>
+            <br>Версия versionName для Android 6.0 и выше.
+            <p><b>Производитель</b>
+            <br>Handy Systems при поддержке ФНС России
+            <p><b>e-mail</b>
+            <br>handy@list.ru
+        ]]>
+    </string>
+</resources>

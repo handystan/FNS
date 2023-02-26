@@ -1,0 +1,115 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.jetbrains.kotlin.android'
+if (getGradle().getStartParameter().getTaskNames().toString().toLowerCase().contains("huawei")) {
+    apply plugin: 'com.huawei.agconnect'
+}
+
+// Create a variable called keystorePropertiesFile, and initialize it to your
+// keystore.properties file, in the rootProject folder.
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+// Initialize a new Properties() object called keystoreProperties.
+def keystoreProperties = new Properties()
+// Load your keystore.properties file into the keystoreProperties object.
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+android {
+    namespace 'ru.handy.android.egrul'
+    signingConfigs {
+        configEgrul {
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+            keyAlias keystoreProperties['keyAliasEgrul']
+            keyPassword keystoreProperties['keyPasswordEgrul']
+        }
+        configBfo {
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+            keyAlias keystoreProperties['keyAliasBfo']
+            keyPassword keystoreProperties['keyPasswordBfo']
+        }
+    }
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 23
+        targetSdk 33
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            // Enables code shrinking, obfuscation, and optimization for only your project's release build type.
+            shrinkResources true
+            // Enables resource shrinking, which is performed by the Android Gradle plugin.
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    flavorDimensions 'fnsServices', 'stores'
+    productFlavors {
+        egrul {
+            applicationId "ru.handy.android.egrul"
+            versionCode 5
+            versionName "1.4"
+            signingConfig signingConfigs.configEgrul
+            dimension 'fnsServices'
+        }
+        bfo {
+            applicationId "ru.handy.android.bfo"
+            versionCode 3
+            versionName "1.2"
+            signingConfig signingConfigs.configBfo
+            dimension 'fnsServices'
+        }
+        google {
+            dimension 'stores'
+        }
+        huawei {
+            versionNameSuffix "-ag"
+            applicationIdSuffix '.huawei'
+            dimension 'stores'
+        }
+    }
+    sourceSets {
+        bfo {
+            java {
+                srcDirs 'src\\bfo\\java'
+            }
+            res {
+                srcDirs 'src\\bfo\\res'
+            }
+        }
+        egrul {
+            java {
+                srcDirs 'src\\egrul\\java'
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    // позволяет перезаписывать pdf-файл, чтобы поменять шрифт
+    implementation 'com.itextpdf:itextpdf:5.5.13.3'
+    // библиотека для обновления страницы через движение пальца вниз
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+    // продвинутая картинка для отображения pdf-файлов
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    //implementation 'com.github.barteksc:android-pdf-viewer:2.8.2' // библиотека для отображения pdf-файла
+    huaweiImplementation 'com.huawei.agconnect:agconnect-core:1.8.0.300'
+    // только для AppGallary from Huawei
+}

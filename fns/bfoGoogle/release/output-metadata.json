@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "ru.handy.android.bfo",
+  "variantName": "bfoGoogleRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 3,
+      "versionName": "1.2",
+      "outputFile": "fns-bfo-google-release.apk"
+    }
+  ],
+  "elementType": "File"
+}

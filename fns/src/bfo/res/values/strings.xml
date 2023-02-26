@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">Accounting reports</string>
+    <string name="app_name_rus">Бух отчетность</string>
+    <string name="save_folder">Папка с отчетностью</string>
+    <string name="folder_for_files">Папка для загрузки отчетности:</string>
+    <string name="pdf_view">Просмотр отчетности</string>
+    <string name="start_url">https://bo.nalog.ru/</string>
+    <string name="page_help">https://bo.nalog.ru/about</string>
+    <string name="error_page">https://bo.nalog.ru/404</string>
+    <string name="pattern_for_start_page"><![CDATA[<div class=\"logo-main__row\">]]></string>
+    <string name="pattern_for_close_1">extended-search is-active</string> <!--открыта ли расшир. форма поиска-->
+    <string name="pattern_for_close_2">download-reports is-active</string> <!--открыта ли форма выгрузки отчетности-->
+    <string name="pattern_for_close_3">menu-wrap is-active</string> <!--открыто ли меню-->
+    <string name="pattern_for_close_4">modal-wrap is-open</string> <!--открыто ли сообщение о составителях отчетности-->
+    <!--для закрытия расшир. формы поиска-->
+    <string name="script_for_close_1">
+        <![CDATA[
+            javascript:(function() {
+                document.querySelector(\'.button.extended-search-form__close.size_none\').click();
+            })()
+        ]]>
+    </string>
+    <!--для закрытия формы выгрузки отчетности-->
+    <string name="script_for_close_2">
+        <![CDATA[
+            javascript:(function() {
+                document.querySelector(\'.button.button_none.button_close\').click();
+            })()
+        ]]>
+    </string>
+    <!--для закрытия меню-->
+    <string name="script_for_close_3">
+        <![CDATA[
+            javascript:(function() {
+                document.querySelector(\'.close-button\').click();
+            })()
+        ]]>
+    </string>
+    <!--для закрытия сообщения о составителях отчетности-->
+    <string name="script_for_close_4">
+        <![CDATA[
+            javascript:(function() {
+                document.querySelector(\'.modal-content.short-info-bottom\').querySelector(\'.btn-close\').click();
+            })()
+        ]]>
+    </string>
+    <!--ссылка на сайт ФНС в основном окне-->
+    <!--ссылка на обратную связь-->
+    <!--ссылка на абонентское обслуживание-->
+    <!--ссылка на сайт ФНС в меню-->
+    <!--нижнее оформление сайта-->
+    <!--О ресурсе: в гармошке "Что такое ресурс БФО" скрыть первое видео-->
+    <!--О ресурсе: в гармошке "Что такое ресурс БФО" скрыть название первого видео-->
+    <!--О ресурсе: скрыть гармошку "отчетность предоставляется в ФНС  вэл. виде"-->
+    <!--О ресурсе: скрыть гармошку "Проверка корректности бух. отчетности"-->
+    <!--О ресурсе: скрыть гармошку "Доступность информации из ресурса БФО"-->
+    <!--О ресурсе: скрыть гармошку "Предост-е инф-и из ресурса БФО гос. и мун. органам"-->
+    <!--О ресурсе: скрыть гармошку "Логотип ресурса БФО"-->
+    <!--О ресурсе: скрыть гармошку "Нормитвно-правовое обеспечение"-->
+    <!--О ресурсе: скрыть гармошку "Документы"-->
+    <string name="jstext_filtered_html">
+        <![CDATA[
+            javascript:(function() {
+                document.querySelector(\'.nav-link-fns\').style.display=\'none\';
+                document.querySelector(\'a[href=\"/feedback\"]\').style.display=\'none\';
+                document.querySelector(\'.notify-indicator\').style.display=\'none\';
+                document.querySelector(\'.link-fns\').style.display=\'none\';
+                document.querySelector(\'.footer\').style.display=\'none\';
+                document.querySelector(\'#mep_0\').style.display=\'none\';
+                document.querySelector(\'.prime-title\').style.display=\'none\';
+                document.querySelector(\'.slides\').querySelectorAll(\'.slides-item\')[1].style.display=\'none\';
+                document.querySelector(\'.slides\').querySelectorAll(\'.slides-item\')[4].style.display=\'none\';
+                document.querySelector(\'.slides\').querySelectorAll(\'.slides-item\')[5].style.display=\'none\';
+                document.querySelector(\'.slides\').querySelectorAll(\'.slides-item\')[6].style.display=\'none\';
+                document.querySelector(\'.slides\').querySelectorAll(\'.slides-item\')[7].style.display=\'none\';
+                document.querySelector(\'.slides\').querySelectorAll(\'.slides-item\')[8].style.display=\'none\';
+                document.querySelector(\'.slides\').querySelectorAll(\'.slides-item\')[9].style.display=\'none\';
+            })()
+        ]]>
+    </string>
+    <string name="about_desc">
+        <![CDATA[
+            <p><big><b>Бухгалтерская (финансовая) отчетность по клиентам из ФНС</b></big>
+            <br>Версия versionName для Android 6.0 и выше.
+            <p><b>Производитель</b>
+            <br>Handy Systems при поддержке ФНС России
+            <p><b>e-mail</b>
+            <br>handy@list.ru
+        ]]>
+    </string>
+</resources>
