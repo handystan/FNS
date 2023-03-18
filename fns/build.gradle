@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'org.jetbrains.kotlin.android'
-if (getGradle().getStartParameter().getTaskNames().toString().toLowerCase().contains("huawei")) {
+/*if (getGradle().getStartParameter().getTaskNames().toString().toLowerCase().contains("huawei"))*/
     apply plugin: 'com.huawei.agconnect'
-}
+
 
 // Create a variable called keystorePropertiesFile, and initialize it to your
 // keystore.properties file, in the rootProject folder.
@@ -53,7 +53,7 @@ android {
         jvmTarget = '1.8'
     }
 
-    flavorDimensions 'fnsServices', 'stores'
+    flavorDimensions 'fnsServices'/*, 'stores'*/
     productFlavors {
         egrul {
             applicationId "ru.handy.android.egrul"
@@ -69,14 +69,14 @@ android {
             signingConfig signingConfigs.configBfo
             dimension 'fnsServices'
         }
-        google {
+        /*google {
             dimension 'stores'
         }
         huawei {
             versionNameSuffix "-ag"
             applicationIdSuffix '.huawei'
             dimension 'stores'
-        }
+        }*/
     }
     sourceSets {
         bfo {
@@ -110,6 +110,6 @@ dependencies {
     // продвинутая картинка для отображения pdf-файлов
     implementation 'com.github.chrisbanes:PhotoView:2.3.0'
     //implementation 'com.github.barteksc:android-pdf-viewer:2.8.2' // библиотека для отображения pdf-файла
-    huaweiImplementation 'com.huawei.agconnect:agconnect-core:1.8.0.300'
-    // только для AppGallary from Huawei
+    // только для AppGallary from Huawei (когда был flavor huawei, было huaweiImplementation)
+    implementation 'com.huawei.agconnect:agconnect-core:1.8.0.300'
 }

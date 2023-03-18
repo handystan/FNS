@@ -5,7 +5,7 @@
     "kind": "Directory"
   },
   "applicationId": "ru.handy.android.bfo",
-  "variantName": "bfoGoogleRelease",
+  "variantName": "bfoRelease",
   "elements": [
     {
       "type": "SINGLE",
@@ -13,7 +13,7 @@
       "attributes": [],
       "versionCode": 3,
       "versionName": "1.2",
-      "outputFile": "fns-bfo-google-release.apk"
+      "outputFile": "fns-bfo-release.apk"
     }
   ],
   "elementType": "File"

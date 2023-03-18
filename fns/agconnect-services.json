@@ -1,71 +1,71 @@
 {
-	"agcgw_all":{
-		"CN":"connect-drcn.dbankcloud.cn",
-		"CN_back":"connect-drcn.hispace.hicloud.com",
-		"DE":"connect-dre.dbankcloud.cn",
-		"DE_back":"connect-dre.hispace.hicloud.com",
-		"RU":"connect-drru.hispace.dbankcloud.ru",
-		"RU_back":"connect-drru.hispace.dbankcloud.cn",
-		"SG":"connect-dra.dbankcloud.cn",
-		"SG_back":"connect-dra.hispace.hicloud.com"
-	},
-	"websocketgw_all":{
-		"CN":"connect-ws-drcn.hispace.dbankcloud.cn",
-		"CN_back":"connect-ws-drcn.hispace.dbankcloud.com",
-		"DE":"connect-ws-dre.hispace.dbankcloud.cn",
-		"DE_back":"connect-ws-dre.hispace.dbankcloud.com",
-		"RU":"connect-ws-drru.hispace.dbankcloud.ru",
-		"RU_back":"connect-ws-drru.hispace.dbankcloud.cn",
-		"SG":"connect-ws-dra.hispace.dbankcloud.cn",
-		"SG_back":"connect-ws-dra.hispace.dbankcloud.com"
-	},
-	"client":{
-		"cp_id":"10007000024362176",
-		"product_id":"99536292102914459",
-		"client_id":"1085814375060622912",
-		"client_secret":"1468B61B2A073E495C1D9A3560E523CDA9E1636AF5696C1DB83C16F6DF34822B",
-		"project_id":"99536292102914459",
-		"app_id":"107663227",
-		"api_key":"DAEDACMke0KuFy834sr3DfANffGjQCOHKZxDmkAf5x46vYPHayyqgvugICssuVVpMKJMfFwnQx+z2zJ3z6N35au0Wd5BZZR3xCb2bA==",
-		"package_name":"ru.handy.android.egrul.huawei"
-	},
-	"oauth_client":{
-		"client_id":"107663227",
-		"client_type":1
-	},
-	"app_info":{
-		"app_id":"107663227",
-		"package_name":"ru.handy.android.egrul.huawei"
-	},
-	"configuration_version":"3.0",
-	"appInfos":[
-		{
-			"package_name":"ru.handy.android.egrul.huawei",
-			"client":{
-				"app_id":"107663227"
-			},
-			"app_info":{
-				"package_name":"ru.handy.android.egrul.huawei",
-				"app_id":"107663227"
-			},
-			"oauth_client":{
-				"client_type":1,
-				"client_id":"107663227"
-			}
-		},
-		{
-			"package_name":"ru.handy.android.bfo.huawei",
-			"client":{
-				"app_id":"107650465"
-			},
-			"app_info":{
-				"package_name":"ru.handy.android.bfo.huawei",
-				"app_id":"107650465"
-			},
-			"oauth_client":{
-				"client_type":1,
-				"client_id":"107650465"
-			}
-		}
-	]
+    "agcgw_all": {
+        "CN": "connect-drcn.dbankcloud.cn",
+        "CN_back": "connect-drcn.hispace.hicloud.com",
+        "DE": "connect-dre.dbankcloud.cn",
+        "DE_back": "connect-dre.hispace.hicloud.com",
+        "RU": "connect-drru.hispace.dbankcloud.ru",
+        "RU_back": "connect-drru.hispace.dbankcloud.cn",
+        "SG": "connect-dra.dbankcloud.cn",
+        "SG_back": "connect-dra.hispace.hicloud.com"
+    },
+    "websocketgw_all": {
+        "CN": "connect-ws-drcn.hispace.dbankcloud.cn",
+        "CN_back": "connect-ws-drcn.hispace.dbankcloud.com",
+        "DE": "connect-ws-dre.hispace.dbankcloud.cn",
+        "DE_back": "connect-ws-dre.hispace.dbankcloud.com",
+        "RU": "connect-ws-drru.hispace.dbankcloud.ru",
+        "RU_back": "connect-ws-drru.hispace.dbankcloud.cn",
+        "SG": "connect-ws-dra.hispace.dbankcloud.cn",
+        "SG_back": "connect-ws-dra.hispace.dbankcloud.com"
+    },
+    "client": {
+        "cp_id": "10007000024362176",
+        "product_id": "99536292102914459",
+        "client_id": "1085814375060622912",
+        "client_secret": "1468B61B2A073E495C1D9A3560E523CDA9E1636AF5696C1DB83C16F6DF34822B",
+        "project_id": "99536292102914459",
+        "app_id": "107802933",
+        "api_key": "DAEDACMke0KuFy834sr3DfANffGjQCOHKZxDmkAf5x46vYPHayyqgvugICssuVVpMKJMfFwnQx+z2zJ3z6N35au0Wd5BZZR3xCb2bA==",
+        "package_name": "ru.handy.android.bfo"
+    },
+    "oauth_client": {
+        "client_id": "107802933",
+        "client_type": 1
+    },
+    "app_info": {
+        "app_id": "107802933",
+        "package_name": "ru.handy.android.bfo"
+    },
+    "configuration_version": "3.0",
+    "appInfos": [
+        {
+            "package_name": "ru.handy.android.bfo",
+            "client": {
+                "app_id": "107802933"
+            },
+            "app_info": {
+                "package_name": "ru.handy.android.bfo",
+                "app_id": "107802933"
+            },
+            "oauth_client": {
+                "client_type": 1,
+                "client_id": "107802933"
+            }
+        },
+        {
+            "package_name": "ru.handy.android.egrul",
+            "client": {
+                "app_id": "107802915"
+            },
+            "app_info": {
+                "package_name": "ru.handy.android.egrul",
+                "app_id": "107802915"
+            },
+            "oauth_client": {
+                "client_type": 1,
+                "client_id": "107802915"
+            }
+        }
+    ]
 }

@@ -5,7 +5,7 @@
     "kind": "Directory"
   },
   "applicationId": "ru.handy.android.egrul",
-  "variantName": "egrulGoogleRelease",
+  "variantName": "egrulRelease",
   "elements": [
     {
       "type": "SINGLE",
@@ -13,7 +13,7 @@
       "attributes": [],
       "versionCode": 5,
       "versionName": "1.4",
-      "outputFile": "fns-egrul-google-release.apk"
+      "outputFile": "fns-egrul-release.apk"
     }
   ],
   "elementType": "File"
