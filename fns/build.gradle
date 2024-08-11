@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'org.jetbrains.kotlin.android'
 /*if (getGradle().getStartParameter().getTaskNames().toString().toLowerCase().contains("huawei"))*/
-    apply plugin: 'com.huawei.agconnect'
+//    apply plugin: 'com.huawei.agconnect'
 
 
 // Create a variable called keystorePropertiesFile, and initialize it to your
@@ -28,21 +28,25 @@ android {
             keyPassword keystoreProperties['keyPasswordBfo']
         }
     }
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         minSdk 23
-        targetSdk 33
+        targetSdk 34
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            minifyEnabled true
             // Enables code shrinking, obfuscation, and optimization for only your project's release build type.
-            shrinkResources true
+            minifyEnabled true
             // Enables resource shrinking, which is performed by the Android Gradle plugin.
+            shrinkResources true
+            proguardFiles(
+                    getDefaultProguardFile("proguard-android.txt"),
+                    "proguard-rules.pro"
+            )
         }
     }
     compileOptions {
@@ -57,15 +61,15 @@ android {
     productFlavors {
         egrul {
             applicationId "ru.handy.android.egrul"
-            versionCode 5
-            versionName "1.4"
+            versionCode 6
+            versionName "1.5"
             signingConfig signingConfigs.configEgrul
             dimension 'fnsServices'
         }
         bfo {
             applicationId "ru.handy.android.bfo"
-            versionCode 3
-            versionName "1.2"
+            versionCode 4
+            versionName "1.3"
             signingConfig signingConfigs.configBfo
             dimension 'fnsServices'
         }
@@ -96,13 +100,13 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
     // позволяет перезаписывать pdf-файл, чтобы поменять шрифт
     implementation 'com.itextpdf:itextpdf:5.5.13.3'
     // библиотека для обновления страницы через движение пальца вниз
@@ -111,5 +115,5 @@ dependencies {
     implementation 'com.github.chrisbanes:PhotoView:2.3.0'
     //implementation 'com.github.barteksc:android-pdf-viewer:2.8.2' // библиотека для отображения pdf-файла
     // только для AppGallary from Huawei (когда был flavor huawei, было huaweiImplementation)
-    implementation 'com.huawei.agconnect:agconnect-core:1.8.0.300'
+    // implementation 'com.huawei.agconnect:agconnect-core:1.8.0.300'
 }

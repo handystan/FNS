@@ -21,4 +21,4 @@
 #-renamesourcefileattribute SourceFile
 
 -ignorewarnings
--keep class com.huawei.agconnect.**{*;}
+# -keep class com.huawei.agconnect.**{*;}

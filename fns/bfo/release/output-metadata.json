@@ -11,10 +11,27 @@
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 3,
-      "versionName": "1.2",
+      "versionCode": 4,
+      "versionName": "1.3",
       "outputFile": "fns-bfo-release.apk"
     }
   ],
-  "elementType": "File"
+  "elementType": "File",
+  "baselineProfiles": [
+    {
+      "minApi": 28,
+      "maxApi": 30,
+      "baselineProfiles": [
+        "baselineProfiles/1/fns-bfo-release.dm"
+      ]
+    },
+    {
+      "minApi": 31,
+      "maxApi": 2147483647,
+      "baselineProfiles": [
+        "baselineProfiles/0/fns-bfo-release.dm"
+      ]
+    }
+  ],
+  "minSdkVersionForDexing": 23
 }
